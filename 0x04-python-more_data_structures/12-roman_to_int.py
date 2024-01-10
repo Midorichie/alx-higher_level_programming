@@ -7,7 +7,7 @@ def roman_to_int(roman_string):
     rep = 0
 
     for i in range(len(numbers) - 1):
-        if numbers[i] >= numbers[i + 1]:
+        if numbers[i] >= numbers[i+1]:
             rep += numbers[i]
         else:
             rep += numbers[i]
