@@ -2,6 +2,7 @@
 """7-rectangle.py"""
 
 
+
 class Rectangle:
     """Class Rectangle that defines a rectangle.
     Args:
