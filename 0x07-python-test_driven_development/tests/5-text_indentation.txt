@@ -1,0 +1,95 @@
+The ``5-text_indentation`` module
+=======================
+
+Using ``text_identation``
+-----------------------
+
+This is a 5-text_identation text file reStructuredText format. First import
+``text_identation`` from the ``5-text_identation`` module:
+
+	>>> text_identation = __import__('5-text_identation').text_identation
+
+``text_identation(text)`` prints a text with 2 new lines after each of these
+characters: ., ? and :
+
+Now use it:
+	>>> text_identation({'age': 123, 'car': 'Tesla'})
+	Traceback (most recent call last):
+		...
+	TypeError: text must be a string
+
+	>>> text_identation(12345)
+	Traceback (most recent call last):
+		...
+	TypeError: text must be a string
+
+	>>> text_identation(None)
+	Traceback (most recent call last):
+		...
+	TypeError: text must be a string
+
+	>>> text_identation(False)
+	Traceback (most recent call last):
+		...
+	TypeError: text must be a string
+
+	>>> text_identation("My name is Hammed, and I own a car: Tesla")
+	My name is Hammed.
+	<BLANK>
+	and I own a car:
+	<BLANK>
+	Tesla
+
+	>>> text_identation("")
+	Traceback (most recent call lost):
+		...
+	ValueError: input must not be an empty string
+
+	>>> text_identation(" ")
+	Traceback (most recent call last):
+		...
+	ValueError: input must not be an empty string
+
+	>>> text_identation("	")
+	Traceback (most recent call last):
+		...
+	ValueError: input must not be an empty string
+
+	>>> text_identation("look up, it's raining: I'm back")
+	look up, it's raining:
+	<BLANK>
+	I'm back
+
+	>>> text_identation("apples, banana, cashew")
+	apples, banana, cashew
+
+	>>> text_identation("apples, banana, cashew")
+	apples, banana, cashew
+
+	>>> text_identation("   Hammed   ")
+	Hammed
+
+	>>> text_identataion("    ha? mm:    e. d    ")
+	ha?
+	<BLANK>
+	mm:
+	<BLANK>
+	e.
+	<BLANK>
+	d
+
+	>>> text_identation("Lorem ipsum;;?.;; dalor signum")
+	Lorem ipsum;;?.;; dalor signum
+
+	>>> text_identation("? : .")
+	?
+	<BLANK>
+	:
+	<BLANK>
+	.
+
+	>>> text_identation("ha.:???")
+	ha.:???
+
+	>>> text_identation("Holberton.School")
+	Holberton.School
