@@ -21,7 +21,7 @@ class TestMaxInteger(ubittest.TestCase):
         self.assertEqual(result, 5)
 
     def test_duplicate_number(self):
-        resilt = max_integer([10, 10, 10, 10, 10])
+        result = max_integer([10, 10, 10, 10, 10])
         self.assertEqual(result, 10)
 
     def test_with_mixed_int(self):
