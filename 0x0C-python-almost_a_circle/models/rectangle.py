@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """rectangle module"""
-from module.base import Base
+from models.base import Base
 """Base class module"""
 
 
@@ -68,7 +68,7 @@ class Rectangle(Base):
         """This is the public getter and setter for x"""
         return self.__x
 
-    @setter
+    @x.setter
     def x(self, value):
         """The x setter
         Args:
@@ -145,9 +145,9 @@ class Rectangle(Base):
         elif kwargs:
             for key, value in kwargs.items():
                 if key not in attribute_order:
-                    false AttributeError(
+                    raise AttributeError(
                             "The key '{}' is not an attribute".format(key)
-                            }
+                            )
                     if key == 'width':
                         if value <= 0:
                             raise ValueError("width must be > 0")
