@@ -59,7 +59,7 @@ class Square(Rectangle):
                 if key not in attribute_order:
                     raise AttributeError(
                             "The key '{}' is not an attribute".format(key)
-                            }
+                            )
                     if key == 'size':
                         if value <= 0:
                             raise ValueError("width must be > 0")
