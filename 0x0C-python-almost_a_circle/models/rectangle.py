@@ -45,7 +45,7 @@ class Rectangle(Base):
     @property
     def height(self):
         """This is the public getter and setter for the height"""
-        return self.height
+        return self.__height
 
     @height.setter
     def height(self, value):
