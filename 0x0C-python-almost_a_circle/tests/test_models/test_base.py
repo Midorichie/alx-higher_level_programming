@@ -8,7 +8,7 @@ import json
 
 class TestBase(unittest.TestCase):
     """It runs test for the Base class"""
-    def setup(self):
+    def setUp(self):
         """Reset the id attribute to 0 for Base class"""
         Base._Base__nb_objects = 0
 
