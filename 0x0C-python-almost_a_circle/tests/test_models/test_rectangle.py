@@ -52,7 +52,7 @@ class TestRectangleInitialization(unittest.TestCase):
         with self.assertRaises(ValueError):
             r1 = Rectangle(-23, 10)
 
-         """Passing 0 width value"""
+        """Passing 0 width value"""
         with self.assertRaises(ValueError):
             r1 = Rectangle(23, 0)
 
